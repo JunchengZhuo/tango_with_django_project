@@ -1,3 +1,5 @@
+from rango.forms import CategoryForm
+from django.shortcuts import redirect
 from django.shortcuts import render
 from rango.models import Category
 from rango.models import Page
