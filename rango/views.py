@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from rango.models import Category
 def index(request):
     # Construct a dictionary to pass to the template engine as its context.
     # Note the key boldmessage matches to {{ boldmessage }} in the template!
