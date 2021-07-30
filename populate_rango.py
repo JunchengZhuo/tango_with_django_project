@@ -19,11 +19,11 @@ def populate():
         'views':'128',
         'likes':'64'},
         {'title':'How to Think like a Computer Scientist',
-        'url':'http://www.greenteapress.com/thinkpython/'
+        'url':'http://www.greenteapress.com/thinkpython/',
         'views':'128',
         'likes':'64'},
         {'title':'Learn Python in 10 Minutes',
-        'url':'http://www.korokithakis.net/tutorials/python/'
+        'url':'http://www.korokithakis.net/tutorials/python/',
         'views':'128',
         'likes':'64'} ]
 
