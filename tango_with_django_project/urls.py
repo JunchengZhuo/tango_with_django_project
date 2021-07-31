@@ -20,14 +20,22 @@ from rango import views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
+#app_name = 'rango'
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('about/', views.about, name='about'),
-    #path('category/<slug:category_name_slug>/add_page/', views.add_page,name='add_page'),
-    path('category/<slug:category_name_slug>/', views.show_category,
-            name='show_category'),
-    path('add_category/', views.add_category, name='add_category'),
-    path('register/', views.register, name='register'), # New mapping!
-    
+    url(r'^$', views.index, name='index'),
+    url(r'about/$', views.about, name='about'),
+    url(r'^add_category/$' views.add_category, name='add_category'),
+
+    url(r'^category/(?P<category_ name_ _slug>[\W\-]+)/$',
+            views . show_ category,
+            name= ' show_ category'),
+
+        url(r'^category/(?P<category_name_slug>[\W\-]+)/add_page/$',
+            views.add_page,
+            name='add_page'),
+
+        url(r'^register/$',
+            views.register,
+            name='register'),
 ]
 #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
