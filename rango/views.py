@@ -101,7 +101,7 @@ def register(request):
               # Update our variable to indicate that the template
               # registration was successful.
               registered = True
-         else:
+          else:
               # Invalid form or forms - mistakes or something else?
               # Print problems to the terminal.
               print(user_form.errors, profile_form.errors)
