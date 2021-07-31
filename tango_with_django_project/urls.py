@@ -27,4 +27,4 @@ urlpatterns = [
         name='show_category'),
     path('add_category/', views.add_category, name='add_category'),
 ]
-]#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
