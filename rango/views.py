@@ -133,3 +133,14 @@ def visitor_cookie_handler(request, response):
                                         '%Y-%m-%d %H:%M:%S')
 
     # If it's been more than a day since the last visit...
+    
+    if (datetime.now() - last_visit_time).days > 0:
+        visits = visits + 1
+        # Update the last visit cookie now that we have updated the count
+        response.set_cookie('last_visit', str(datetime.now()))
+    else:
+        # Set the last visit cookie
+        response.set_cookie('last_visit', last_visit_cookie)
+
+     # Update/set the visits cookie
+     response.set_cookie('visits', visits)
