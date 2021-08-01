@@ -1,3 +1,4 @@
+from datetime import datetime
 request.session.set_test_cookie()
 from rango.forms import CategoryForm
 from django.shortcuts import redirect
