@@ -176,3 +176,19 @@ def index(request):
     
     # Return response back to the user, updating any cookies that need changed.
     return response
+
+# A helper method
+    def get_server_side_cookie(request, cookie, default_val=None):
+    val = request.session.get(cookie)
+    if not val:
+        val = default_val
+    return val
+
+# Updated the function definition
+    def visitor_cookie_handler(request):
+        visits = int(get_server_side_cookie(request, 'visits', '1'))
+        last_visit_cookie = get_server_side_cookie(request,
+                                                   'last_visit',
+                                                    str(datetime.now()))
+    last_visit_time = datetime.strptime(last_visit_cookie[:-7],
+                                        '%Y-%m-%d %H:%M:%S')
