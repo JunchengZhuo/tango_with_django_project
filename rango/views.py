@@ -6,6 +6,7 @@ from django.shortcuts import render
 from rango.models import Category
 from rango.models import Page
 from rango.forms import UserForm, UserProfileForm
+from datetime import datetime
 def index(request):
     category_list = Category.objects.order_by('-likes')[:5]
     context_dict = {}
